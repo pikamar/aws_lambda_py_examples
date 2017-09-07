@@ -1,0 +1,22 @@
+service: aws-python-cognito-events
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  preSignUp:
+    handler: preSignUp.handler
+    events:
+      - cognitoUserPool:
+          pool: MyUserPool
+          trigger: PreSignUp
+  customMessage:
+    handler: customMessage.handler
+    events:
+      - cognitoUserPool:
+          pool: MyUserPool
+          trigger: CustomMessage
+

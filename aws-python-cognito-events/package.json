@@ -1,0 +1,7 @@
+{
+  "name": "aws-python-cognito-events",
+  "version": "1.0.0",
+  "description": "Example demonstrates how to handle Cognito events",
+  "author": "",
+  "license": "MIT"
+}
